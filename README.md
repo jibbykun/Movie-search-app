@@ -6,3 +6,4 @@ This app will display:
 4. Error handling
 5. Loading indicators
 6. Responsive design
+7. favourites feature letting users store favourite films locally
