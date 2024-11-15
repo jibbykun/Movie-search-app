@@ -10,7 +10,7 @@ const SearchBar = ({ onSearch }) => {
   };
 
   return (
-    <div style={{ marginBottom: '20px' }}>
+    <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', marginBottom: '20px' }}>
       <input
         type="text"
         placeholder="Search for movies..."
