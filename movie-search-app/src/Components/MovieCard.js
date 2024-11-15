@@ -1,6 +1,6 @@
 import React from 'react';
 
-const MovieCard = ({ movie }) => {
+const MovieCard = ({ movie, toggleFavorite, isFavorite }) => {
   return (
     <div
       style={{
@@ -9,6 +9,7 @@ const MovieCard = ({ movie }) => {
         border: '1px solid #ccc',
         borderRadius: '10px',
         textAlign: 'center',
+        position: 'relative',
       }}
     >
       <img
@@ -18,6 +19,20 @@ const MovieCard = ({ movie }) => {
       />
       <h3>{movie.Title}</h3>
       <p>{movie.Year}</p>
+      <button
+        onClick={() => toggleFavorite(movie)}
+        style={{
+          padding: '5px 10px',
+          marginTop: '10px',
+          backgroundColor: isFavorite ? 'red' : 'lightgray',
+          color: 'white',
+          border: 'none',
+          borderRadius: '5px',
+          cursor: 'pointer',
+        }}
+      >
+        {isFavorite ? 'Remove from Favorites' : 'Add to Favorites'}
+      </button>
     </div>
   );
 };
